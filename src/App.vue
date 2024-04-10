@@ -1,8 +1,14 @@
-<script setup></script>
+<script setup>
+import { useUserStore } from './stores/modules/user'
+const userStore = useUserStore()
+</script>
 
 <template>
   <div>
-    <el-button type="primary">Primary</el-button>
+    {{ userStore.token }}
+    <el-button type="primary" @click="userStore.setToken('hhhhhhh')"
+      >改token</el-button
+    >
     <el-button type="success">Success</el-button>
   </div>
 </template>
