@@ -10,7 +10,7 @@ const channelList = ref([])
 const getChannelList = async () => {
   const res = await artGetChannelsService()
   channelList.value = res.data.data
-  console.log(channelList.value)
+  // console.log(channelList.value)
 }
 getChannelList()
 </script>
@@ -27,7 +27,6 @@ getChannelList()
         :value="item.id"
         :key="item.id"
       ></el-option>
-      <el-option label="体育" value="体育"></el-option>
     </el-select>
   </div>
 </template>
